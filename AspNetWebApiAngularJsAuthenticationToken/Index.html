@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+
+<body ng-app="userManagement"
+      ng-controller="userCtrl as vm">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand"></div>
+                <form ng-hide="vm.isAuthenticated()" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="username (email)"
+                               ng-model="vm.userData.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password"
+                               class="form-control"
+                               placeholder="password"
+                               ng-model="vm.userData.password">
+                    </div>
+                    <button type="submit"
+                            class="btn btn-default"
+                            ng-click="vm.login()">
+                        Login
+                    </button>
+                    <button type="submit"
+                            class="btn btn-default"
+                            ng-click="vm.registerUser()">
+                        Register
+                    </button>
+                    <div ng-show="vm.message">{{vm.message}}</div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-if="vm.isAuthenticated()"
+             ng-include="'app/user/productListView.html'"></div>
+    </div>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/Common/common.services.js"></script>
+    <script src="app/Common/userAccount.js"></script>
+    <script src="app/Common/currentUser.js"></script>
+    <script src="app/userCtrl.js"></script>
+    <script src="app/User/productResource.js"></script>
+    <script src="app/User/productListCtrl.js"></script>
+</body>
+</html>
