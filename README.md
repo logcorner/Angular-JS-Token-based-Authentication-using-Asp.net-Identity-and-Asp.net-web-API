@@ -1,1 +1,1 @@
-# Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API
+# AngularJS-2-Token-based-Authentication-using-Asp.net-Core-Web-API-and-JSON-Web-Token
