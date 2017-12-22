@@ -70,7 +70,7 @@ namespace TokenAuthWebApiCore.Server
                 {
                     bldr.AllowAnyHeader()
                         .AllowAnyMethod()
-                        .WithOrigins("http://localhost:3276");
+                        .WithOrigins("http://localhost:3276", "http://localhost:51610");
                 });
             });
         }

@@ -8,7 +8,7 @@
 
 <body ng-app="appmodule"
       ng-controller="userCtrl as vm">
-    <nav class="navbar navbar-default">
+    <!--<nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="navbar-brand"></div>
@@ -39,12 +39,17 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav>-->
 
     <div class="container">
         <div ng-if="vm.isLoggedIn()"
-             ng-include="'app/user/productListView.html'"></div>
+             ng-include="'app/user/productListView.html'">
+        </div>
+        <div ng-if="vm.isLoggedIn() == false"
+             ng-include="'app/user/userLoginView.html'">
+        </div>
     </div>
+
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-resource.js"></script>
     <script src="app/app.js"></script>
