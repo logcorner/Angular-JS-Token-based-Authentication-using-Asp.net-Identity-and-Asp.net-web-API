@@ -9,14 +9,77 @@
 <body ng-app="appmodule"
       ng-controller="userCtrl as vm">
 
-    <div class="container">
-        <div ng-if="vm.isLoggedIn() == true"
-             ng-include="'app/user/productListView.html'">
-        </div>
-        <div ng-if="vm.isLoggedIn() == false"
-             ng-include="'app/user/userLoginView.html'">
+    <!--hh-->
+    <div>
+
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://logcorner.com">LogCorner.com</a>
+                </div>
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-if="vm.isLoggedIn()">
+                            <a>Welcome {{ vm.userName }}</a>
+                        </li>
+                        <!--<li *ngIf="!authService.isAuthenticated()">
+                            <a [routerLink]="['/login']">Log In</a>
+                        </li>
+                        <li *ngIf="!authService.isAuthenticated()">
+                            <a [routerLink]="['/signup']">Register</a>
+                        </li>-->
+                        <li ng-if="vm.isLoggedIn()">
+                            <span>
+                                <!--<a (click)="logOut()">Log Out</a>-->
+                                <button type="submit"
+                                        class="btn btn-default"
+                                        ng-click="vm.logout()">
+                                    Log Out
+                                </button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <!--<ul class="nav navbar-nav">
+                        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/home']">Home</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/products']">Products</a>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron">
+                    <h1>AngularJS Token Authentication </h1>
+                    <p>
+                        AngularJS Token based Authentication using Asp.net Core Web API and JSON Web Token
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-if="vm.isLoggedIn() == true"
+                     ng-include="'app/user/productListView.html'">
+                </div>
+                <div ng-if="vm.isLoggedIn() == false"
+                     ng-include="'app/user/userLoginView.html'">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--fff-->
 
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-resource.js"></script>
@@ -27,12 +90,11 @@
     <script src="app/Model/userProfile.js"></script>
     <script src="app/service/productService.js"></script>
     <script src="app/User/productListCtrl.js"></script>
-    
+
     <!--<script src="app/Common/common.services.js"></script>
         <script src="app/Common/userAccount.js"></script>
         <script src="app/Common/currentUser.js"></script>
         <script src="app/userCtrl.js"></script>
         <script src="app/User/productResource.js"></script>-->
-
-    </body>
-    </html>
+</body>
+</html>
