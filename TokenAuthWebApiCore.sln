@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuthWebApiCore.Server"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuthWebApiCore.Server.IntegrationTest", "TokenAuthWebApiCore.Server.IntegrationTest\TokenAuthWebApiCore.Server.IntegrationTest.csproj", "{01DF07E1-BEC9-4B7E-B1A7-6871AD917294}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2Client", "TokenAuthWebApiCore.Client\Angular2Client.csproj", "{9EE46C96-EA2C-44F7-A81D-1907104686CD}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJsClient(2)", "AngularJsClient\", "{6B5471BA-BF69-42FC-A317-FE5EE1F16C01}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJsClient(2)", "AngularJsClient\", "{E9E2C93D-E56E-4250-B150-28765CD9D481}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51610"
@@ -31,6 +29,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJsClient(2)", "Angul
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2Client", "Angular2Client\Angular2Client.csproj", "{9EE46C96-EA2C-44F7-A81D-1907104686CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,14 +45,14 @@ Global
 		{01DF07E1-BEC9-4B7E-B1A7-6871AD917294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01DF07E1-BEC9-4B7E-B1A7-6871AD917294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01DF07E1-BEC9-4B7E-B1A7-6871AD917294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E2C93D-E56E-4250-B150-28765CD9D481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E2C93D-E56E-4250-B150-28765CD9D481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E2C93D-E56E-4250-B150-28765CD9D481}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E2C93D-E56E-4250-B150-28765CD9D481}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{9EE46C96-EA2C-44F7-A81D-1907104686CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EE46C96-EA2C-44F7-A81D-1907104686CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EE46C96-EA2C-44F7-A81D-1907104686CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EE46C96-EA2C-44F7-A81D-1907104686CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B5471BA-BF69-42FC-A317-FE5EE1F16C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B5471BA-BF69-42FC-A317-FE5EE1F16C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B5471BA-BF69-42FC-A317-FE5EE1F16C01}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B5471BA-BF69-42FC-A317-FE5EE1F16C01}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
