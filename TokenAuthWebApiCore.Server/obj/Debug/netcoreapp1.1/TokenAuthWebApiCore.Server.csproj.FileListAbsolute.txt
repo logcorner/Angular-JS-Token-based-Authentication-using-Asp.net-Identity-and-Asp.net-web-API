@@ -47,7 +47,6 @@ C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\bin\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.runtimeconfig.dev.json
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\bin\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.dll
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\bin\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.pdb
-C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\obj\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.csprojResolveAssemblyReference.cache
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\obj\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.csproj.CoreCompileInputs.cache
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\obj\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.AssemblyInfoInputs.cache
 C:\TEAMPROJECT\GIT\Angular-JS-Token-based-Authentication-using-Asp.net-Identity-and-Asp.net-web-API\TokenAuthWebApiCore.Server\obj\Debug\netcoreapp1.1\TokenAuthWebApiCore.Server.AssemblyInfo.cs

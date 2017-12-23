@@ -1,13 +1,10 @@
 ﻿<div class="row">
     <div class="col-md-6">
-
         <div class="panel panel-success">
             <div class="panel-heading center-block">
                 <span>REGISTER A NEW USER</span>
             </div>
-
             <div class="panel-body">
-
                 <form ng-hide="vm.isLoggedIn()" class="form-horizontal" role="form">
                     <div class="form-group">
                         <input type="text"
@@ -33,24 +30,18 @@
                         Register
                     </button>
                 </form>
-                <!--<h3 ng-show="vm.isLoggedIn()">
-                    <span>{{vm.userEmail}}</span>
-                    <input type="button" class="btn" value="logoff" ng-click="vm.logout()" />
-                </h3>-->
             </div>
-
             <div class="panel-footer">
                 <div class="alert-danger" ng-show="vm.registerErrorData">{{vm.registerErrorData}}</div>
+                <div class="alert-success" ng-show="vm.responseData">{{vm.responseData}}</div>
             </div>
         </div>
     </div>
-
     <div class="col-md-6">
         <div class="panel panel-success">
             <div class="panel-heading center-block">
                 <span>LOGIN IN</span>
             </div>
-
             <div class="panel-body">
                 <form ng-hide="vm.isLoggedIn()" class="form-horizontal" role="form">
                     <div class="form-group">
@@ -78,7 +69,3 @@
         </div>
     </div>
 </div>
-<!--<h3 ng-show="vm.isLoggedIn()">
-    <span>{{vm.userEmail}}</span>
-    <input type="button" class="btn" value="logoff" ng-click="vm.logout()" />
-</h3>-->

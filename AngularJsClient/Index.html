@@ -8,10 +8,7 @@
 
 <body ng-app="appmodule"
       ng-controller="userCtrl as vm">
-
-    <!--hh-->
     <div>
-
         <nav class="navbar navbar-default ">
             <div class="container">
                 <div class="navbar-header">
@@ -23,20 +20,12 @@
                     <a class="navbar-brand" href="https://logcorner.com">LogCorner.com</a>
                 </div>
                 <div class="navbar-collapse collapse">
-
                     <ul class="nav navbar-nav navbar-right">
                         <li ng-if="vm.isLoggedIn()">
                             <a>Welcome {{ vm.userName }}</a>
                         </li>
-                        <!--<li *ngIf="!authService.isAuthenticated()">
-                            <a [routerLink]="['/login']">Log In</a>
-                        </li>
-                        <li *ngIf="!authService.isAuthenticated()">
-                            <a [routerLink]="['/signup']">Register</a>
-                        </li>-->
                         <li ng-if="vm.isLoggedIn()">
                             <span>
-                                <!--<a (click)="logOut()">Log Out</a>-->
                                 <button type="submit"
                                         class="btn btn-default"
                                         ng-click="vm.logout()">
@@ -47,14 +36,6 @@
                     </ul>
                 </div>
                 <div>
-                    <!--<ul class="nav navbar-nav">
-                        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-                            <a [routerLink]="['/home']">Home</a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/products']">Products</a>
-                        </li>
-                    </ul>-->
                 </div>
             </div>
         </nav>
@@ -70,7 +51,7 @@
             </div>
             <div class="row">
                 <div ng-if="vm.isLoggedIn() == true"
-                     ng-include="'app/user/productListView.html'">
+                     ng-include="'app/product/productListView.html'">
                 </div>
                 <div ng-if="vm.isLoggedIn() == false"
                      ng-include="'app/user/userLoginView.html'">
@@ -79,22 +60,14 @@
         </div>
     </div>
 
-    <!--fff-->
-
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-resource.js"></script>
     <script src="app/app.js"></script>
     <script src="app/Common/common.services.js"></script>
-    <script src="app/userCtrl.js"></script>
+    <script src="app/user/userCtrl.js"></script>
+    <script src="app/product/productListCtrl.js"></script>
     <script src="app/service/loginservice.js"></script>
-    <script src="app/Model/userProfile.js"></script>
     <script src="app/service/productService.js"></script>
-    <script src="app/User/productListCtrl.js"></script>
-
-    <!--<script src="app/Common/common.services.js"></script>
-        <script src="app/Common/userAccount.js"></script>
-        <script src="app/Common/currentUser.js"></script>
-        <script src="app/userCtrl.js"></script>
-        <script src="app/User/productResource.js"></script>-->
+    <script src="app/Model/userProfile.js"></script>
 </body>
 </html>

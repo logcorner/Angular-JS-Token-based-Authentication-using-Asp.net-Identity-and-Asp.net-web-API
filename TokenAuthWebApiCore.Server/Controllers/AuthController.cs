@@ -40,26 +40,34 @@ namespace TokenAuthWebApiCore.Server.Controllers
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterViewModel model)
         {
-            if (!ModelState.IsValid)
+            try
             {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                var user = new MyUser()
+                {
+                    UserName = model.Email,
+                    Email = model.Email
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+
+                if (result.Succeeded)
+                {
+                    return Ok(result);
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
                 return BadRequest(ModelState);
             }
-            var user = new MyUser()
+            catch (Exception ex)
             {
-                UserName = model.Email,
-                Email = model.Email
-            };
-            var result = await _userManager.CreateAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                return Ok(result);
+                _logger.LogError($"error while registering user: {ex}");
+                return StatusCode((int)HttpStatusCode.InternalServerError, "error while registering user");
             }
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("error", error.Description);
-            }
-            return BadRequest(result.Errors);
         }
 
         [ValidateForm]
