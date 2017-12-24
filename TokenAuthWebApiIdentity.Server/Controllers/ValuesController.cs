@@ -3,7 +3,6 @@ using System.Web.Http;
 
 namespace AspNetWebApiAngularJsAuthenticationToken.Controllers
 {
-    //[AccessControlAllowOrigin]
     [Authorize]
     public class ValuesController : ApiController
     {

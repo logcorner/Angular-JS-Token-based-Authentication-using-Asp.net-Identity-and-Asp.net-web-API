@@ -15,13 +15,11 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace AspNetWebApiAngularJsAuthenticationToken.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
-    [EnableCors("http://localhost:51610", "*", "*")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
@@ -68,6 +66,7 @@ namespace AspNetWebApiAngularJsAuthenticationToken.Controllers
         }
 
         // POST api/Account/Logout
+        [AllowAnonymous]
         [Route("Logout")]
         public IHttpActionResult Logout()
         {

@@ -2,7 +2,6 @@
 
 namespace AspNetWebApiAngularJsAuthenticationToken.Controllers
 {
-    //[AccessControlAllowOrigin]
     public class HomeController : Controller
     {
         public ActionResult Index()
